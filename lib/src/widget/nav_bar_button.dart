@@ -5,7 +5,7 @@ import '../paint/sliced_card.dart';
 
 class NavBarButton extends StatefulWidget {
   final String title;
-  final IconData icon;
+  final Widget icon;
   final bool isSelected;
   final Color activeColor;
   final double size;
@@ -151,11 +151,12 @@ class _NavBarButtonState extends State<NavBarButton>
                   ),
                 ),
               ),
-              child: Icon(
-                widget.icon,
-                size: size,
-                color: inactiveColor,
-              ),
+              child: widget.icon,
+              // Icon(
+              //   widget.icon,
+              //   size: size,
+              //   color: inactiveColor,
+              // ),
             ),
             SlideTransition(
               position: Tween<Offset>(

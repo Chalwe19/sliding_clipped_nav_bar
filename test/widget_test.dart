@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
@@ -81,7 +79,7 @@ void main() {
       ], false));
     }, throwsAssertionError);
 
-     expect(() async {
+    expect(() async {
       await tester.pumpWidget(baseStructure(<BarItem>[
         _barItemWithColor,
         _barItemWithColor,
@@ -119,12 +117,12 @@ void main() {
 
 final BarItem _barItem = BarItem(
   title: 'title',
-  icon: Icons.home,
+  icon: Icon(Icons.home),
 );
 
 final BarItem _barItemWithColor = BarItem(
   title: 'title',
-  icon: Icons.home,
+  icon: Icon(Icons.home),
   activeColor: Colors.red,
   inactiveColor: Colors.green,
 );
